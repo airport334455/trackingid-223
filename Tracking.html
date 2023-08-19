@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blue Dart Order Tracking</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url('blue-dart-express-ltd-tadepalligudem-bazar-tadepalligudem-courier-services-xfeifmrcju');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Blue Dart Order Tracking</h1>
+  <p>Order Name: Palapula Priya</p>
+  <p>Order ID: 7583492347</p>
+  <label for="trackingNumber">Enter Tracking Number:</label>
+  <input type="text" id="trackingNumber" placeholder="Enter tracking number...">
+  <button id="trackButton">Track Order</button>
+  <div id="orderInfo"></div>
+</div>
+
+<script>
+  document.getElementById('trackButton').addEventListener('click', function() {
+    var trackingNumber = document.getElementById('trackingNumber').value;
+    // In a real-world scenario, you would perform an API call to fetch order information based on the tracking number.
+    // For this example, we'll simulate the response.
+    var orderData = {
+      item: 'Laptop',
+      contents: 'Letters, Hard Copy',
+      status: 'Out for delivery'
+    };
+    
+    var orderInfoDiv = document.getElementById('orderInfo');
+    orderInfoDiv.innerHTML = `
+      <h2>Order Information</h2>
+      <p><strong>Item:</strong> ${orderData.item}</p>
+      <p><strong>Contents:</strong> ${orderData.contents}</p>
+      <p><strong>Status:</strong> ${orderData.status}</p>
+    `;
+  });
+</script>
+</body>
+</html>
